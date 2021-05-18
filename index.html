@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myCanvas {
+           width: 30%;
+        }
+        body {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 2%;
+        }
+        table, th, td {
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+    <h2><code>&ltcanvas&gt</code> tag:</h2>
+    <canvas id="myCanvas">
+        Your browser does not support the canvas tag.
+    </canvas>
+
+    <h2><code>&ltbdo dir="rtl"&gt</code> tag:</h2>
+    <p><bdo dir="rtl">This paragraph will go right-to-left.</bdo></p>  
+
+    <h2><code>&ltdatalist&gt</code> tag:</h2>
+    <label for="browser">Choose your browser from the list:</label>
+    <input list="browsers" name="browser" id="browser">
+    <datalist id="browsers">
+        <option value="Edge">
+        <option value="Firefox">
+        <option value="Chrome">
+        <option value="Opera">
+        <option value="Safari">
+    </datalist>
+
+    <h2><code>&ltdetails&gt</code> tag:</h2>
+    <details>
+        <summary>Epcot Center</summary>
+        <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+    </details>
+
+    <h2><code>&lttable&gt</code> tag:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Month</th>
+                <th>Savings</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>January</td>
+                <td>$100</td>
+            </tr>
+            <tr>
+                <td>February</td>
+                <td>$0.10</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Sum</td>
+                <td>$100.10</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h2><code>&ltiframe&gt</code> tag:</h2>
+    <iframe width="453" height="362" src="https://www.youtube.com/embed/_BAokU1kjsA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#3d453e";
+        ctx.fillRect(0, 0, 150, 150);
+
+        ctx.font = "20px Georgia";
+        ctx.fillStyle = "#20d629";
+        ctx.fillText("Hello World!", 10, 40);
+
+        ctx.font = "30px Verdana";
+        // Create gradient
+        var gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
+        gradient.addColorStop("0"," red");
+        gradient.addColorStop("0.25", "magenta");
+        gradient.addColorStop("0.5", "blue");
+        // Fill with gradient
+        ctx.fillStyle = gradient;
+        ctx.fillText("Big smile!", 0, 90);
+    </script>
+        
+</body>
+</html>
